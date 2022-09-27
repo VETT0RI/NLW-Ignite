@@ -12,8 +12,6 @@ app.use(cors())
 
 const prisma = new PrismaClient()
 
-// localhost:333/ads
-
 app.get('/games', async (request, response) => {
   const games = await prisma.game.findMany({
     include: {
@@ -98,4 +96,4 @@ app.get('/ads/:id/discord', async (request, response) => {
   });
 });
 
-app.listen(3333);
+app.listen(3334);
